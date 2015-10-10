@@ -1,0 +1,1080 @@
+==== t01 ====
+==== t02 ====
+8c8
+< Token(TK.ASSIGN = 4)
+---
+> scan: line 4 bad char (ASCII 61)
+23c23
+< Token(TK.ENDDO > 8)
+---
+> scan: line 8 bad char (ASCII 62)
+==== t04 ====
+==== t05 ====
+==== t06 ====
+==== t07 ====
+==== t08 ====
+==== t09 ====
+==== t10 ====
+==== t11 ====
+7c7
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+10c10
+< Token(TK.ASSIGN = 4)
+---
+> scan: line 4 bad char (ASCII 61)
+==== t12 ====
+7c7
+< Token(TK.ASSIGN = 4)
+---
+> scan: line 4 bad char (ASCII 61)
+10c10
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+==== t14 ====
+15c15
+< Token(TK.ASSIGN = 4)
+---
+> scan: line 4 bad char (ASCII 61)
+18c18
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+23c23
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+28c28
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+73c73
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+83c83
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+87c87
+< Token(TK.ENDDO > 11)
+---
+> scan: line 11 bad char (ASCII 62)
+89c89
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+92c92
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+102c102
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+107c107
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+111c111
+< Token(TK.ENDDO > 14)
+---
+> scan: line 14 bad char (ASCII 62)
+==== t15 ====
+5c5
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+37c37
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+65c65
+< Token(TK.ASSIGN = 8)
+---
+> scan: line 8 bad char (ASCII 61)
+93c93
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+==== t16 ====
+13c13
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+45c45
+< Token(TK.ASSIGN = 9)
+---
+> scan: line 9 bad char (ASCII 61)
+73c73
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+101c101
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+==== t17 ====
+7c7
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+20c20
+< Token(TK.ASSIGN = 9)
+---
+> scan: line 9 bad char (ASCII 61)
+25c25
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+28c28
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+36c36
+< Token(TK.ASSIGN = 12)
+---
+> scan: line 12 bad char (ASCII 61)
+40c40
+< Token(TK.ENDDO > 12)
+---
+> scan: line 12 bad char (ASCII 62)
+47c47
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+57c57
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+64c64
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+68c68
+< Token(TK.ENDDO > 15)
+---
+> scan: line 15 bad char (ASCII 62)
+73c73
+< Token(TK.ASSIGN = 18)
+---
+> scan: line 18 bad char (ASCII 61)
+83c83
+< Token(TK.ASSIGN = 19)
+---
+> scan: line 19 bad char (ASCII 61)
+87c87
+< Token(TK.ENDDO > 19)
+---
+> scan: line 19 bad char (ASCII 62)
+90c90
+< Token(TK.ASSIGN = 21)
+---
+> scan: line 21 bad char (ASCII 61)
+94c94
+< Token(TK.ENDDO > 21)
+---
+> scan: line 21 bad char (ASCII 62)
+==== t18 ====
+5c5
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+20c20
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+45c45
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+64c64
+< Token(TK.ASSIGN = 17)
+---
+> scan: line 17 bad char (ASCII 61)
+76c76
+< Token(TK.ASSIGN = 20)
+---
+> scan: line 20 bad char (ASCII 61)
+==== t19 ====
+7c7
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+20c20
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+30c30
+< Token(TK.ASSIGN = 7)
+---
+> scan: line 7 bad char (ASCII 61)
+34c34
+< Token(TK.ENDDO > 7)
+---
+> scan: line 7 bad char (ASCII 62)
+41c41
+< Token(TK.ASSIGN = 9)
+---
+> scan: line 9 bad char (ASCII 61)
+51c51
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+58c58
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+62c62
+< Token(TK.ENDDO > 10)
+---
+> scan: line 10 bad char (ASCII 62)
+65c65
+< Token(TK.ASSIGN = 12)
+---
+> scan: line 12 bad char (ASCII 61)
+75c75
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+79c79
+< Token(TK.ENDDO > 13)
+---
+> scan: line 13 bad char (ASCII 62)
+82c82
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+86c86
+< Token(TK.ENDDO > 15)
+---
+> scan: line 15 bad char (ASCII 62)
+==== t20 ====
+17c17
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+20c20
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+35c35
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+45c45
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+49c49
+< Token(TK.ENDDO > 11)
+---
+> scan: line 11 bad char (ASCII 62)
+56c56
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+66c66
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+73c73
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+77c77
+< Token(TK.ENDDO > 14)
+---
+> scan: line 14 bad char (ASCII 62)
+80c80
+< Token(TK.ASSIGN = 16)
+---
+> scan: line 16 bad char (ASCII 61)
+90c90
+< Token(TK.ASSIGN = 17)
+---
+> scan: line 17 bad char (ASCII 61)
+94c94
+< Token(TK.ENDDO > 17)
+---
+> scan: line 17 bad char (ASCII 62)
+97c97
+< Token(TK.ASSIGN = 19)
+---
+> scan: line 19 bad char (ASCII 61)
+101c101
+< Token(TK.ENDDO > 19)
+---
+> scan: line 19 bad char (ASCII 62)
+==== t31 ====
+7c7
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+10c10
+< Token(TK.ASSIGN = 4)
+---
+> scan: line 4 bad char (ASCII 61)
+24c24
+< Token(TK.ASSIGN = 8)
+---
+> scan: line 8 bad char (ASCII 61)
+27c27
+< Token(TK.ASSIGN = 9)
+---
+> scan: line 9 bad char (ASCII 61)
+41c41
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+44c44
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+58c58
+< Token(TK.ASSIGN = 18)
+---
+> scan: line 18 bad char (ASCII 61)
+61c61
+< Token(TK.ASSIGN = 19)
+---
+> scan: line 19 bad char (ASCII 61)
+==== t32 ====
+7c7
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+10c10
+< Token(TK.ASSIGN = 4)
+---
+> scan: line 4 bad char (ASCII 61)
+24c24
+< Token(TK.ASSIGN = 8)
+---
+> scan: line 8 bad char (ASCII 61)
+27c27
+< Token(TK.ASSIGN = 9)
+---
+> scan: line 9 bad char (ASCII 61)
+41c41
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+44c44
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+58c58
+< Token(TK.ASSIGN = 18)
+---
+> scan: line 18 bad char (ASCII 61)
+61c61
+< Token(TK.ASSIGN = 19)
+---
+> scan: line 19 bad char (ASCII 61)
+==== t33 ====
+7c7
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+10c10
+< Token(TK.ASSIGN = 4)
+---
+> scan: line 4 bad char (ASCII 61)
+24c24
+< Token(TK.ASSIGN = 8)
+---
+> scan: line 8 bad char (ASCII 61)
+27c27
+< Token(TK.ASSIGN = 9)
+---
+> scan: line 9 bad char (ASCII 61)
+41c41
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+44c44
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+58c58
+< Token(TK.ASSIGN = 18)
+---
+> scan: line 18 bad char (ASCII 61)
+61c61
+< Token(TK.ASSIGN = 19)
+---
+> scan: line 19 bad char (ASCII 61)
+==== t37 ====
+5c5
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+17c17
+< Token(TK.ASSIGN = 7)
+---
+> scan: line 7 bad char (ASCII 61)
+29c29
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+41c41
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+==== t42 ====
+5c5
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+20c20
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+25c25
+< Token(TK.TILDE ~ 5)
+---
+> scan: line 5 bad char (ASCII 126)
+28c28
+< Token(TK.TILDE ~ 5)
+---
+> scan: line 5 bad char (ASCII 126)
+32c32
+< Token(TK.TILDE ~ 5)
+---
+> scan: line 5 bad char (ASCII 126)
+39c39
+< Token(TK.TILDE ~ 7)
+---
+> scan: line 7 bad char (ASCII 126)
+42c42
+< Token(TK.TILDE ~ 8)
+---
+> scan: line 8 bad char (ASCII 126)
+==== t43 ====
+5c5
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+20c20
+< Token(TK.ASSIGN = 5)
+---
+> scan: line 5 bad char (ASCII 61)
+25c25
+< Token(TK.TILDE ~ 5)
+---
+> scan: line 5 bad char (ASCII 126)
+28c28
+< Token(TK.TILDE ~ 5)
+---
+> scan: line 5 bad char (ASCII 126)
+32c32
+< Token(TK.TILDE ~ 5)
+---
+> scan: line 5 bad char (ASCII 126)
+36c36
+< Token(TK.TILDE ~ 5)
+---
+> scan: line 5 bad char (ASCII 126)
+43c43
+< Token(TK.TILDE ~ 7)
+---
+> scan: line 7 bad char (ASCII 126)
+46c46
+< Token(TK.TILDE ~ 8)
+---
+> scan: line 8 bad char (ASCII 126)
+==== t44 ====
+5c5
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+20c20
+< Token(TK.ASSIGN = 7)
+---
+> scan: line 7 bad char (ASCII 61)
+24c24
+< Token(TK.TILDE ~ 9)
+---
+> scan: line 9 bad char (ASCII 126)
+26c26
+< Token(TK.ASSIGN = 9)
+---
+> scan: line 9 bad char (ASCII 61)
+28c28
+< Token(TK.TILDE ~ 10)
+---
+> scan: line 10 bad char (ASCII 126)
+31c31
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+35c35
+< Token(TK.TILDE ~ 11)
+---
+> scan: line 11 bad char (ASCII 126)
+38,39c38,39
+< Token(TK.ASSIGN = 11)
+< Token(TK.TILDE ~ 11)
+---
+> scan: line 11 bad char (ASCII 61)
+> scan: line 11 bad char (ASCII 126)
+47c47
+< Token(TK.TILDE ~ 12)
+---
+> scan: line 12 bad char (ASCII 126)
+50c50
+< Token(TK.TILDE ~ 12)
+---
+> scan: line 12 bad char (ASCII 126)
+54c54
+< Token(TK.TILDE ~ 12)
+---
+> scan: line 12 bad char (ASCII 126)
+61c61
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+64c64
+< Token(TK.TILDE ~ 16)
+---
+> scan: line 16 bad char (ASCII 126)
+==== t45 ====
+5c5
+< Token(TK.ASSIGN = 2)
+---
+> scan: line 2 bad char (ASCII 61)
+16c16
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+31c31
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+33c33
+< Token(TK.TILDE ~ 11)
+---
+> scan: line 11 bad char (ASCII 126)
+36c36
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+40c40
+< Token(TK.TILDE ~ 13)
+---
+> scan: line 13 bad char (ASCII 126)
+42c42
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+44c44
+< Token(TK.TILDE ~ 14)
+---
+> scan: line 14 bad char (ASCII 126)
+47c47
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+51c51
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+54,55c54,55
+< Token(TK.ASSIGN = 15)
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 61)
+> scan: line 15 bad char (ASCII 126)
+60c60
+< Token(TK.TILDE ~ 16)
+---
+> scan: line 16 bad char (ASCII 126)
+63,64c63,64
+< Token(TK.ASSIGN = 16)
+< Token(TK.TILDE ~ 16)
+---
+> scan: line 16 bad char (ASCII 61)
+> scan: line 16 bad char (ASCII 126)
+72c72
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 126)
+75c75
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 126)
+79c79
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 126)
+83c83
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 126)
+90c90
+< Token(TK.TILDE ~ 20)
+---
+> scan: line 20 bad char (ASCII 126)
+93c93
+< Token(TK.TILDE ~ 21)
+---
+> scan: line 21 bad char (ASCII 126)
+97c97
+< Token(TK.TILDE ~ 22)
+---
+> scan: line 22 bad char (ASCII 126)
+104c104
+< Token(TK.TILDE ~ 25)
+---
+> scan: line 25 bad char (ASCII 126)
+107c107
+< Token(TK.TILDE ~ 26)
+---
+> scan: line 26 bad char (ASCII 126)
+==== t46 ====
+5c5
+< Token(TK.ASSIGN = 2)
+---
+> scan: line 2 bad char (ASCII 61)
+16c16
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+31c31
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+33c33
+< Token(TK.TILDE ~ 11)
+---
+> scan: line 11 bad char (ASCII 126)
+36c36
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+40c40
+< Token(TK.TILDE ~ 13)
+---
+> scan: line 13 bad char (ASCII 126)
+42c42
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+44c44
+< Token(TK.TILDE ~ 14)
+---
+> scan: line 14 bad char (ASCII 126)
+47c47
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+52c52
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+60c60
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+63c63
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+67c67
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+69,70c69,70
+< Token(TK.ASSIGN = 15)
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 61)
+> scan: line 15 bad char (ASCII 126)
+76c76
+< Token(TK.ENDDO > 15)
+---
+> scan: line 15 bad char (ASCII 62)
+78c78
+< Token(TK.ASSIGN = 16)
+---
+> scan: line 16 bad char (ASCII 61)
+82c82
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 126)
+85,86c85,86
+< Token(TK.ASSIGN = 17)
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 61)
+> scan: line 17 bad char (ASCII 126)
+94c94
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 126)
+97c97
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 126)
+101c101
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 126)
+110c110
+< Token(TK.TILDE ~ 21)
+---
+> scan: line 21 bad char (ASCII 126)
+113c113
+< Token(TK.TILDE ~ 22)
+---
+> scan: line 22 bad char (ASCII 126)
+117c117
+< Token(TK.TILDE ~ 23)
+---
+> scan: line 23 bad char (ASCII 126)
+124c124
+< Token(TK.TILDE ~ 26)
+---
+> scan: line 26 bad char (ASCII 126)
+127c127
+< Token(TK.TILDE ~ 27)
+---
+> scan: line 27 bad char (ASCII 126)
+==== t47 ====
+5c5
+< Token(TK.ASSIGN = 2)
+---
+> scan: line 2 bad char (ASCII 61)
+16c16
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+31c31
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+33c33
+< Token(TK.TILDE ~ 11)
+---
+> scan: line 11 bad char (ASCII 126)
+36c36
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+40c40
+< Token(TK.TILDE ~ 13)
+---
+> scan: line 13 bad char (ASCII 126)
+42c42
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+44c44
+< Token(TK.TILDE ~ 14)
+---
+> scan: line 14 bad char (ASCII 126)
+47c47
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+52c52
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+60c60
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+63c63
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+67c67
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+69,70c69,70
+< Token(TK.ASSIGN = 15)
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 61)
+> scan: line 15 bad char (ASCII 126)
+76c76
+< Token(TK.ENDDO > 15)
+---
+> scan: line 15 bad char (ASCII 62)
+78c78
+< Token(TK.ASSIGN = 16)
+---
+> scan: line 16 bad char (ASCII 61)
+83c83
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 126)
+85c85
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 126)
+88,89c88,89
+< Token(TK.ASSIGN = 18)
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 61)
+> scan: line 18 bad char (ASCII 126)
+97c97
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+100c100
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+104c104
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+113c113
+< Token(TK.TILDE ~ 22)
+---
+> scan: line 22 bad char (ASCII 126)
+116c116
+< Token(TK.TILDE ~ 23)
+---
+> scan: line 23 bad char (ASCII 126)
+120c120
+< Token(TK.TILDE ~ 24)
+---
+> scan: line 24 bad char (ASCII 126)
+127c127
+< Token(TK.TILDE ~ 27)
+---
+> scan: line 27 bad char (ASCII 126)
+130c130
+< Token(TK.TILDE ~ 28)
+---
+> scan: line 28 bad char (ASCII 126)
+==== t48 ====
+5c5
+< Token(TK.ASSIGN = 2)
+---
+> scan: line 2 bad char (ASCII 61)
+16c16
+< Token(TK.ASSIGN = 6)
+---
+> scan: line 6 bad char (ASCII 61)
+31c31
+< Token(TK.ASSIGN = 10)
+---
+> scan: line 10 bad char (ASCII 61)
+33c33
+< Token(TK.TILDE ~ 11)
+---
+> scan: line 11 bad char (ASCII 126)
+36c36
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+40c40
+< Token(TK.TILDE ~ 13)
+---
+> scan: line 13 bad char (ASCII 126)
+42c42
+< Token(TK.ASSIGN = 13)
+---
+> scan: line 13 bad char (ASCII 61)
+44c44
+< Token(TK.TILDE ~ 14)
+---
+> scan: line 14 bad char (ASCII 126)
+47c47
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+52c52
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+60c60
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+63c63
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+67c67
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+69,70c69,70
+< Token(TK.ASSIGN = 15)
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 61)
+> scan: line 15 bad char (ASCII 126)
+76c76
+< Token(TK.ENDDO > 15)
+---
+> scan: line 15 bad char (ASCII 62)
+78c78
+< Token(TK.ASSIGN = 16)
+---
+> scan: line 16 bad char (ASCII 61)
+83c83
+< Token(TK.TILDE ~ 17)
+---
+> scan: line 17 bad char (ASCII 126)
+86c86
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 126)
+89,90c89,90
+< Token(TK.ASSIGN = 18)
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 61)
+> scan: line 18 bad char (ASCII 126)
+98c98
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+101c101
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+105c105
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+114c114
+< Token(TK.TILDE ~ 22)
+---
+> scan: line 22 bad char (ASCII 126)
+117c117
+< Token(TK.TILDE ~ 23)
+---
+> scan: line 23 bad char (ASCII 126)
+121c121
+< Token(TK.TILDE ~ 24)
+---
+> scan: line 24 bad char (ASCII 126)
+128c128
+< Token(TK.TILDE ~ 27)
+---
+> scan: line 27 bad char (ASCII 126)
+131c131
+< Token(TK.TILDE ~ 28)
+---
+> scan: line 28 bad char (ASCII 126)
+==== t49 ====
+5c5
+< Token(TK.ASSIGN = 3)
+---
+> scan: line 3 bad char (ASCII 61)
+16c16
+< Token(TK.ASSIGN = 7)
+---
+> scan: line 7 bad char (ASCII 61)
+31c31
+< Token(TK.ASSIGN = 11)
+---
+> scan: line 11 bad char (ASCII 61)
+33c33
+< Token(TK.TILDE ~ 12)
+---
+> scan: line 12 bad char (ASCII 126)
+36c36
+< Token(TK.ASSIGN = 12)
+---
+> scan: line 12 bad char (ASCII 61)
+40c40
+< Token(TK.TILDE ~ 14)
+---
+> scan: line 14 bad char (ASCII 126)
+42c42
+< Token(TK.ASSIGN = 14)
+---
+> scan: line 14 bad char (ASCII 61)
+44c44
+< Token(TK.TILDE ~ 15)
+---
+> scan: line 15 bad char (ASCII 126)
+47c47
+< Token(TK.ASSIGN = 15)
+---
+> scan: line 15 bad char (ASCII 61)
+52c52
+< Token(TK.TILDE ~ 16)
+---
+> scan: line 16 bad char (ASCII 126)
+60c60
+< Token(TK.ASSIGN = 16)
+---
+> scan: line 16 bad char (ASCII 61)
+63c63
+< Token(TK.TILDE ~ 16)
+---
+> scan: line 16 bad char (ASCII 126)
+67c67
+< Token(TK.TILDE ~ 16)
+---
+> scan: line 16 bad char (ASCII 126)
+69,70c69,70
+< Token(TK.ASSIGN = 16)
+< Token(TK.TILDE ~ 16)
+---
+> scan: line 16 bad char (ASCII 61)
+> scan: line 16 bad char (ASCII 126)
+76c76
+< Token(TK.ENDDO > 16)
+---
+> scan: line 16 bad char (ASCII 62)
+78c78
+< Token(TK.ASSIGN = 17)
+---
+> scan: line 17 bad char (ASCII 61)
+82c82
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 126)
+85,86c85,86
+< Token(TK.ASSIGN = 18)
+< Token(TK.TILDE ~ 18)
+---
+> scan: line 18 bad char (ASCII 61)
+> scan: line 18 bad char (ASCII 126)
+94c94
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+97c97
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+101c101
+< Token(TK.TILDE ~ 19)
+---
+> scan: line 19 bad char (ASCII 126)
+110c110
+< Token(TK.TILDE ~ 22)
+---
+> scan: line 22 bad char (ASCII 126)
+113c113
+< Token(TK.TILDE ~ 23)
+---
+> scan: line 23 bad char (ASCII 126)
+117c117
+< Token(TK.TILDE ~ 24)
+---
+> scan: line 24 bad char (ASCII 126)
+124c124
+< Token(TK.TILDE ~ 27)
+---
+> scan: line 27 bad char (ASCII 126)
+127c127
+< Token(TK.TILDE ~ 28)
+---
+> scan: line 28 bad char (ASCII 126)
