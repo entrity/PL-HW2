@@ -89,6 +89,12 @@ public class Scan {
 					return ccase1(']',TK.ENDIF);
 				case '<':
 					return ccase1('<',TK.DO);
+				case '>':
+					return ccase1('>',TK.ENDDO);
+				case '=':
+					return ccase1('=',TK.ASSIGN);
+				case '~':
+					return ccase1('~',TK.TILDE);
 				case EOF:
 					got_eof = true;
 					return new Token(TK.EOF,
@@ -130,6 +136,7 @@ public class Scan {
 		return c;
 	}
 
+	// Return a single 1-char Token for the given char and TK
 	private Token ccase1(char c, TK r) {
 		return new Token(r, new String(String.valueOf(c)), linenumber);
 	}

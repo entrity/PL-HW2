@@ -1,0 +1,39 @@
+diff --git a/Scan.java b/Scan.java
+index 5fa65dc..b6b0028 100644
+--- a/Scan.java
++++ b/Scan.java
+@@ -89,6 +89,12 @@ public class Scan {
+ 					return ccase1(']',TK.ENDIF);
+ 				case '<':
+ 					return ccase1('<',TK.DO);
++				case '>':
++					return ccase1('>',TK.ENDDO);
++				case '=':
++					return ccase1('=',TK.ASSIGN);
++				case '~':
++					return ccase1('~',TK.TILDE);
+ 				case EOF:
+ 					got_eof = true;
+ 					return new Token(TK.EOF,
+@@ -130,6 +136,7 @@ public class Scan {
+ 		return c;
+ 	}
+ 
++	// Return a single 1-char Token for the given char and TK
+ 	private Token ccase1(char c, TK r) {
+ 		return new Token(r, new String(String.valueOf(c)), linenumber);
+ 	}
+diff --git a/TK.java b/TK.java
+index 9ecf482..be554a6 100644
+--- a/TK.java
++++ b/TK.java
+@@ -25,6 +25,9 @@ public class TK {
+ 	public static final TK ELSE    = new TK("TK.ELSE");    // %
+ 	public static final TK ENDIF   = new TK("TK.ENDIF");   // ]
+ 	public static final TK DO      = new TK("TK.DO");      // <
++	public static final TK ENDDO   = new TK("TK.ENDDO");   // >
++	public static final TK ASSIGN  = new TK("TK.ASSIGN");  // =
++	public static final TK TILDE   = new TK("TK.TILDE");   // ~
+ 
+ 	public static final TK COMMA  = new TK("TK.COMMA");    // ,
+ 	public static final TK LPAREN = new TK("TK.LPAREN");   // (
