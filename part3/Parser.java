@@ -105,12 +105,15 @@ public class Parser {
 
 	private void do_token() {
 		mustbe(TK.DO);
+		symbolTable.push();
 		guarded_command();
 		mustbe(TK.ENDDO); // '>'
+		symbolTable.pop();
 	}
 
 	private void if_token() {
 		mustbe(TK.IF);
+		symbolTable.push();
 		guarded_command();
 		while ( tok.kind == TK.ELSEIF ) { // '|'
 			scan(); // '|'
@@ -121,6 +124,7 @@ public class Parser {
 			block();
 		}
 		mustbe(TK.ENDIF); // ']'
+		symbolTable.pop();
 	}
 
 	private void expr() {
