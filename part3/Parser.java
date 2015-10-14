@@ -78,26 +78,23 @@ public class Parser {
 
 	private void ref_id() {
 		if ( tok.kind == TK.TILDE ) {
-			int scopeDepth = 0;
 			scan();
-			if ( tok.kind == TK.NUM )
-				scopeDepth = number();
-			identifier(scopeDepth);
+			if ( tok.kind == TK.NUM ) {
+				int scopeDepth = number();
+				symbolTable.get(tok, scopeDepth);
+			}
+			else
+				symbolTable.getGlobal(tok);
 		}
 		else
-			identifier();
+			symbolTable.get(tok);
+		identifier();
 	}
 
 	private void identifier() {
-		symbolTable.get(tok);
 		mustbe(TK.ID);
 	}
 	
-	private void identifier(int scopeDepth) {
-		symbolTable.get(tok, scopeDepth);
-		mustbe(TK.ID);
-	}
-
 	private void print() {
 		mustbe(TK.PRINT);
 		expr();
@@ -174,14 +171,10 @@ public class Parser {
 
 	// ensure current token is tk and skip over it.
 	private void mustbe(TK tk) {
-//		System.out.println("foo0");
 		if( tok.kind != tk ) {
-//			System.out.println("foo");
 			System.err.println( "mustbe: want " + tk + ", got " +
 				tok);
-//			System.out.println("foo2");
 			parse_error( "missing token (mustbe)" );
-//			System.out.println("foo3");
 		}
 		scan();
 	}

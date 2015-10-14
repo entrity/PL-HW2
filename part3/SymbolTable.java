@@ -26,6 +26,13 @@ public class SymbolTable extends LinkedList<Scope> {
 		return getFirst().declare(tok);
 	}
 	
+	public Symbol getGlobal (Token tok) {
+		Symbol output = getLast().get(tok.string);
+		if (output == null)
+			System.err.printf("no such variable ~%s on line %d%n", tok.string, tok.lineNumber);
+		return output;
+	}
+	
 	public Symbol get (Token tok) {
 		for (Scope scope : this) {
 			if (scope.containsKey(tok.string))
@@ -38,18 +45,10 @@ public class SymbolTable extends LinkedList<Scope> {
 	public Symbol get (Token tok, int depth) {
 		Symbol output = null;
 		if (this.size() > depth) {
-			Scope selectedScope = this.get(depth);
-			if (selectedScope != null) {
-				output = selectedScope.get(tok.string);
-				if (output == null)
-					undeclaredVariableError(tok);
-			}
-			else {
-				System.err.printf("No scope for index number %d%n", depth);
-				System.exit(1);
-			}
+			Scope scope = get(depth);
+			output = scope.get(tok.string);
 		}
-		else {
+		if (output == null) {
 			System.err.printf("no such variable ~%d%s on line %d%n", depth, tok.string, tok.lineNumber);
 		}
 		return output;
@@ -58,7 +57,6 @@ public class SymbolTable extends LinkedList<Scope> {
 
 	private void undeclaredVariableError (Token tok) {
 		System.err.printf( "%s is an undeclared variable on line %d%n", tok.string, tok.lineNumber);
-		
 		System.exit(1);
 	}
 

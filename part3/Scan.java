@@ -16,6 +16,7 @@ public class Scan {
 		// hence linenumber is initialized to 0.
 		isr = new InputStreamReader(System.in);
 		c = '\n';
+		charnumber = 0;
 		linenumber = 0;
 		putback = true;
 		got_eof = false;
@@ -26,8 +27,14 @@ public class Scan {
 	private String token;    // the token as a string
 	private TK tkrep;        // the kind of token
 	private int linenumber;  // line number
+	private int charnumber;
 
 	private boolean got_eof; // true iff have seen EOF
+	// Return a single 1-char Token for the given char and TK
+	private Token ccase1(char c, TK r) {
+		return new Token(r, new String(String.valueOf(c)), linenumber, charnumber);
+	}
+
 	private boolean putback; // true iff put a char back
 	private int c;           // current or putback char
 	// (int rather than char to handle EOF)
@@ -39,7 +46,7 @@ public class Scan {
 	public Token scan() {
 		if( got_eof ) {
 			System.err.println("scan: oops -- called after eof.");
-			return new Token(TK.ERROR, "called after eof", linenumber);
+			return new Token(TK.ERROR, "called after eof", linenumber, charnumber);
 		}
 
 		while(true) {
@@ -47,15 +54,16 @@ public class Scan {
 				putback = false;
 			}
 			else {
+				charnumber ++;
 				c = getchar();
 			}
 			if ( myisalpha((char) c) ) {
 				/* identifier. */
-				return new Token(TK.ID, buildID(), linenumber);
+				return new Token(TK.ID, buildID(), linenumber, charnumber);
 			}
 			else if ( myisdigit((char) c) ) {
 				/* number. */
-				return new Token(TK.NUM, buildNUM(), linenumber);
+				return new Token(TK.NUM, buildNUM(), linenumber, charnumber);
 			}
 			else {
 				switch( c ) {
@@ -99,9 +107,10 @@ public class Scan {
 					got_eof = true;
 					return new Token(TK.EOF,
 							new String("*EOF*"),
-							linenumber);
+							linenumber, charnumber);
 				case '\n':
 					linenumber++;
+					charnumber = 0;
 					break;
 				case ' ':
 				case '\t':
@@ -136,11 +145,6 @@ public class Scan {
 		return c;
 	}
 
-	// Return a single 1-char Token for the given char and TK
-	private Token ccase1(char c, TK r) {
-		return new Token(r, new String(String.valueOf(c)), linenumber);
-	}
-
 	// not used in this scanner
 	private Token ccase1or2(char c1, char c2, TK r1, TK r2) {
 		int c = getchar();
@@ -148,11 +152,11 @@ public class Scan {
 			return new Token(
 					r2,
 					new String(String.valueOf(c1)+String.valueOf(c2)),
-					linenumber);
+					linenumber, charnumber);
 		}
 		else {
 			putback = true;
-			return new Token(r1, new String(String.valueOf(c1)), linenumber);
+			return new Token(r1, new String(String.valueOf(c1)), linenumber, charnumber);
 		}
 	}
 
@@ -162,13 +166,13 @@ public class Scan {
 		if (c == c2) {
 			return new Token(
 					r, String.valueOf(c1)+String.valueOf(c2),
-					linenumber);
+					linenumber, charnumber);
 		}
 		else {
 			System.err.println("scan: got got " + c1 +
 					" missing " + c2 +
 					" (got ASCII " + c + ")");
-			return new Token(TK.ERROR, "bad ccase2", linenumber);
+			return new Token(TK.ERROR, "bad ccase2", linenumber, charnumber);
 		}
 	}
 
