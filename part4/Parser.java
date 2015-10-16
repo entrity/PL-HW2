@@ -22,12 +22,16 @@ public class Parser {
 	}
 
 	private void program() {
+		System.out.println("#include <stdio.h>");
+		System.out.println("main ()");
 		block();
 	}
 
 	private void block(){
+		System.out.println("{");
 		declaration_list();
 		statement_list();
+		System.out.println("}");
 	}
 
 	private void declaration_list() {
@@ -41,14 +45,19 @@ public class Parser {
 	}
 
 	private void declaration() {
+		System.out.print("int ");
 		mustbe(TK.DECLARE);
-		symbolTable.declare(tok);
+		Symbol symbol = symbolTable.declare(tok);
+		System.out.print(symbol.mangle());
 		mustbe(TK.ID);
 		while( is(TK.COMMA) ) {
+			System.out.print(',');
 			scan();
-			symbolTable.declare(tok);
+			symbol = symbolTable.declare(tok);
+			System.out.print(symbol.mangle());
 			mustbe(TK.ID);
 		}
+		System.out.println(";");
 	}
 
 	private void statement_list() {
@@ -73,21 +82,23 @@ public class Parser {
 	private void assignment() {
 		ref_id();
 		mustbe(TK.ASSIGN);
+		System.out.print(" = ");
 		expr();
+		System.out.println(';');
 	}
 
 	private void ref_id() {
+		Symbol symbol = null;
 		if ( tok.kind == TK.TILDE ) {
 			scan();
-			if ( tok.kind == TK.NUM ) {
-				int scopeDepth = number();
-				symbolTable.get(tok, scopeDepth);
-			}
-			else
-				symbolTable.getGlobal(tok);
+			int scopeDepth = 0;
+			if ( tok.kind == TK.NUM )
+				number();
+			symbol = symbolTable.get(tok, scopeDepth);
 		}
 		else
-			symbolTable.get(tok);
+			symbol = symbolTable.get(tok);
+		System.out.print(symbol.mangle());
 		identifier();
 	}
 
@@ -97,11 +108,14 @@ public class Parser {
 	
 	private void print() {
 		mustbe(TK.PRINT);
+		System.out.print("printf( \"%d\\n\", ");
 		expr();
+		System.out.print(");");
 	}
 
 	private void do_token() {
 		mustbe(TK.DO);
+		System.out.print("while");
 		symbolTable.push();
 		guarded_command();
 		mustbe(TK.ENDDO); // '>'
@@ -110,13 +124,16 @@ public class Parser {
 
 	private void if_token() {
 		mustbe(TK.IF);
+		System.out.print("if");
 		symbolTable.push();
 		guarded_command();
 		while ( tok.kind == TK.ELSEIF ) { // '|'
+			System.out.print("else if");
 			scan(); // '|'
 			guarded_command();
 		}
 		if ( tok.kind == TK.ELSE ) { // '%'
+			System.out.print("else");
 			scan();
 			block();
 		}
@@ -127,6 +144,7 @@ public class Parser {
 	private void expr() {
 		term();
 		while ( tok.kind == TK.PLUS || tok.kind == TK.MINUS ) {
+			System.out.print(tok.kind == TK.PLUS ? '+' : '-');
 			scan();
 			term();
 		}
@@ -135,6 +153,7 @@ public class Parser {
 	private void term() {
 		factor();
 		while ( tok.kind == TK.TIMES || tok.kind == TK.DIVIDE ) {
+			System.out.print(tok.kind == TK.TIMES ? '*' : '/');
 			scan();
 			factor();
 		}
@@ -142,9 +161,11 @@ public class Parser {
 
 	private void factor() {
 		if (tok.kind == TK.LPAREN ) {
+			System.out.print(" ( ");
 			scan();
 			expr();
 			mustbe(TK.RPAREN);
+			System.out.print(" ) ");
 		}
 		else if (tok.kind == TK.NUM)
 			number();
@@ -155,11 +176,14 @@ public class Parser {
 	private int number() {
 		Token tok = this.tok;
 		mustbe(TK.NUM);
+		System.out.printf(" %s ", tok.string);
 		return Integer.parseInt(tok.string);
 	}
 
 	private void guarded_command() {
+		System.out.print(" ( ");
 		expr();
+		System.out.println(" )");
 		mustbe(TK.THEN);
 		block();
 	}

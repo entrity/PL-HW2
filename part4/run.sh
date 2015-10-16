@@ -11,8 +11,10 @@ function run1
 	bname=`basename $f`
 	stub=${bname%.*}
 	echo ==== $stub ====
-	echo "running e2c $stub" > $OUT 
-	java e2c < $f &>> $OUT
+	echo "running e2c" > $OUT
+	java e2c < $f > $stub.c 2>> $OUT \
+	&& (echo 'compiling the C generated code' >> $OUT) && cc $stub.c \
+	&& (echo 'executing the a.out' >> $OUT) && ./a.out >> $OUT
 	diff "$stub".correct $OUT
 	if (( $? )); then
 		FAILURES=$(( $FAILURES + 1 ))

@@ -1,4 +1,3 @@
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class SymbolTable extends LinkedList<Scope> {
@@ -9,7 +8,7 @@ public class SymbolTable extends LinkedList<Scope> {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static long serialVersionUID = 1L;
 	
 	public Scope pop () {
 		return remove(0);
@@ -17,20 +16,13 @@ public class SymbolTable extends LinkedList<Scope> {
 
 	//	Actually behaves like unshift; puts new entry at position 0
 	public Scope push () {
-		Scope output = new Scope();
+		Scope output = new Scope(serialVersionUID ++);
 		add(0, output);
 		return output;
 	}
 	
 	public Symbol declare (Token tok) {
 		return getFirst().declare(tok);
-	}
-	
-	public Symbol getGlobal (Token tok) {
-		Symbol output = getLast().get(tok.string);
-		if (output == null)
-			System.err.printf("no such variable ~%s on line %d%n", tok.string, tok.lineNumber);
-		return output;
 	}
 	
 	public Symbol get (Token tok) {
