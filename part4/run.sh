@@ -18,6 +18,7 @@ function run1
 	diff "$stub".correct $OUT
 	if (( $? )); then
 		FAILURES=$(( $FAILURES + 1 ))
+		exit 1
 	fi
 }
 

@@ -36,12 +36,19 @@ public class SymbolTable extends LinkedList<Scope> {
 	
 	public Symbol get (Token tok, int depth) {
 		Symbol output = null;
-		if (this.size() > depth) {
-			Scope scope = get(depth);
+		Scope scope = null;
+		if (depth < 0)
+			scope = getLast();
+		else if (this.size() > depth)
+			scope = get(depth);
+		if (scope != null)
 			output = scope.get(tok.string);
-		}
 		if (output == null) {
-			System.err.printf("no such variable ~%d%s on line %d%n", depth, tok.string, tok.lineNumber);
+			if (depth < 0)
+				System.err.printf("no such variable ~%s on line %d%n", tok.string, tok.lineNumber);
+			else
+				System.err.printf("no such variable ~%d%s on line %d%n", depth, tok.string, tok.lineNumber);
+			System.exit(1);
 		}
 		return output;
 	}
