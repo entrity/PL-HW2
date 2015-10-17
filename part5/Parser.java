@@ -69,7 +69,7 @@ public class Parser {
 			return;
 		else
 			while (TK.TILDE == tok.kind || TK.ID == tok.kind || TK.PRINT == tok.kind || TK.IF == tok.kind
-					|| TK.DO == tok.kind)
+					|| TK.DO == tok.kind || TK.LBRACE == tok.kind )
 				statement();
 	}
 
@@ -80,6 +80,8 @@ public class Parser {
 			do_token();
 		else if (tok.kind == TK.PRINT)
 			print();
+		else if (tok.kind == TK.LBRACE)
+			do_for();
 		else
 			assignment();
 	}
@@ -124,6 +126,20 @@ public class Parser {
 		symbolTable.push();
 		guarded_command();
 		mustbe(TK.ENDDO); // '>'
+		symbolTable.pop();
+	}
+
+	private void do_for() {
+		mustbe(TK.LBRACE);
+		System.out.print("for (");
+		symbolTable.push();
+		statement();
+		expr();
+		System.out.print(" <= 0;");
+		statement();
+		System.out.println(")");
+		block();
+		mustbe(TK.RBRACE);
 		symbolTable.pop();
 	}
 

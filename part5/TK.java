@@ -29,6 +29,9 @@ public class TK {
 	public static final TK ASSIGN  = new TK("TK.ASSIGN");  // =
 	public static final TK TILDE   = new TK("TK.TILDE");   // ~
 
+	public static final TK LBRACE  = new TK("TK.LBRACE");   // {}
+	public static final TK RBRACE  = new TK("TK.RBRACE");   // }
+
 	public static final TK COMMA  = new TK("TK.COMMA");    // ,
 	public static final TK LPAREN = new TK("TK.LPAREN");   // (
 	public static final TK RPAREN = new TK("TK.RPAREN");   // )

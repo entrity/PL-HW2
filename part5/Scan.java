@@ -103,6 +103,11 @@ public class Scan {
 					return ccase1('=',TK.ASSIGN);
 				case '~':
 					return ccase1('~',TK.TILDE);
+				case '{':
+					return ccase1('{',TK.LBRACE);
+				case '}':
+					return ccase1('}',TK.RBRACE);
+					
 				case EOF:
 					got_eof = true;
 					return new Token(TK.EOF,

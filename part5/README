@@ -3,7 +3,7 @@ Part 5
 
 Iteration statement is implemented with the following EBNF rule:
 
-	for ::= '|' statement expr statement block 
+	for ::= '{' statement expr statement block '}'
 
 This requires an update to the statement rule given in the specification to be the following:
 
