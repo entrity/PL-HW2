@@ -12,7 +12,7 @@ function run1
 	stub=${bname%.*}
 	echo ==== $stub ====
 	echo "running e2c" > $OUT
-	java e2c < $f > $stub.c 2>> $OUT \
+	java e2c < $stub.e > $stub.c 2>> $OUT \
 	&& (echo 'compiling the C generated code' >> $OUT) && cc $stub.c \
 	&& (echo 'executing the a.out' >> $OUT) && ./a.out >> $OUT
 	diff "$stub".correct $OUT

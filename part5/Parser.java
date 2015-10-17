@@ -134,7 +134,8 @@ public class Parser {
 		mustbe(TK.LBRACE);
 		System.out.print("for (");
 		symbolTable.push();
-		statement();
+		assignment();
+		System.out.print(';');
 		expr();
 		System.out.print(" <= 0;");
 		assignment();
