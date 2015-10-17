@@ -3,7 +3,7 @@ Part 5
 
 Iteration statement is implemented with the following EBNF rule:
 
-	for ::= '{' statement expr statement block '}'
+	for ::= '{' statement expr assignment block '}'
 
 This requires an update to the statement rule given in the specification to be the following:
 
@@ -11,7 +11,7 @@ This requires an update to the statement rule given in the specification to be t
 
 The semantics of the for construct (iteration statement) is as follows. Its design was selected so as to align its internal syntax closely with the for statements of other languages, such as C.
 
-	The first statement in the construct is used as an initialization statement, mimicking C's `for` statement, whose first element within the parenthetical is the initialization statement.
+	The statement in the construct is used as an initialization statement, mimicking C's `for` statement, whose first element within the parenthetical is the initialization statement.
 
 	E.g. i = 10
 
@@ -19,7 +19,7 @@ The semantics of the for construct (iteration statement) is as follows. Its desi
 
 	E.g. i
 
-	The second statement in the construct is used to update the state of the loop. We expect the typical use of this statement to be either incrementing or decrementing the principal (or sole) variable which is evaluated in the expr described in the preceding paragraph. This is intended to mimic the third element of the parenthetical of C's `for` statement. This 
+	The assignment in the construct is used to update the state of the loop. We expect the typical use of this statement to be either incrementing or decrementing the principal (or sole) variable which is evaluated in the expr described in the preceding paragraph. This is intended to mimic the third element of the parenthetical of C's `for` statement. This 
 
 	E.g. i = i + 1
 

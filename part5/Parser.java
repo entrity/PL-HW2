@@ -82,8 +82,10 @@ public class Parser {
 			print();
 		else if (tok.kind == TK.LBRACE)
 			do_for();
-		else
+		else {
 			assignment();
+			System.out.println(';');
+		}
 	}
 
 	private void assignment() {
@@ -91,7 +93,6 @@ public class Parser {
 		mustbe(TK.ASSIGN);
 		System.out.print(" = ");
 		expr();
-		System.out.println(';');
 	}
 
 	private void ref_id() {
@@ -136,7 +137,7 @@ public class Parser {
 		statement();
 		expr();
 		System.out.print(" <= 0;");
-		statement();
+		assignment();
 		System.out.println(")");
 		block();
 		mustbe(TK.RBRACE);
